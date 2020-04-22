@@ -4,8 +4,9 @@ tagline: Robot Test Generation
 email: ch6wdf@virginia.edu
 description: >
   A website describing the artifact for the paper: Feasible and Stressful Trajectory Generation for Mobile Robots
-baseurl: "/robot-test-generation"
-url: "TODO"
+baseurl: "/RobotTestGenerationArtifact"
+url: https://hildebrandt-carl.github.io
+repository: "RobotTestGenerationArtifact"
 permalink: pretty
 #favicon: /path/to/favicon.png
 gh_sponsor: paper

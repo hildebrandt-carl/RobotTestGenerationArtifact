@@ -13,7 +13,6 @@
     {% unless page.hide_hero %}
         {% include hero.html %}
     {% endunless %}
-    {% include callouts.html %}
     <section class="section">
         <div class="container">
             <div class="columns">
@@ -24,7 +23,6 @@
                 {% endif %}
                 <div class="column {{ content_width }}">
                     {% include tabs.html %}
-                    {% include showcase.html %}
                     {% include sponsors.html %}
                     {{ content }}
                 </div>
@@ -33,6 +31,15 @@
                     {% include latest-posts.html %}
                 </div>
                 {% endif %}
+            </div>
+        </div>
+    </section>
+    {% include callouts.html %}
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column {{ content_width }}">
+                    {% include showcase.html %}
             </div>
         </div>
     </section>

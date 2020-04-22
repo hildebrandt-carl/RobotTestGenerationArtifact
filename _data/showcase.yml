@@ -1,0 +1,13 @@
+intro: |-
+
+items:
+  - title: World Engine
+    subtitle: An example of a corridor dynamically created in World Engine
+    description: |-
+    features_styles: is-centered is-outlined
+    image: /img/minimap.gif
+    image_ratio: is-4by3
+    link: https://github.com/hildebrandt-carl/RobotTestGeneration
+    link_text: Github Repo
+    tags: Test Generation, Stress Testing, Mobile Robots, Kinematic and Dy- namic Models, Trajectories
+    github: hildebrandt-carl/RobotTestGeneration

@@ -1,0 +1,13 @@
+alignment: is-left
+style: is-boxed
+size: is-large
+items:
+  - name: KD Models
+    link: /kd-models/
+    icon: fa-angle-right
+  - name: Scoring Models
+    link: /scoring-models/
+    icon: fa-angle-right
+  - name: Study
+    link: /study/
+    icon: fa-angle-right

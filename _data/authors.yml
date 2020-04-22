@@ -1,0 +1,12 @@
+- tier_name: Authors
+  description: |-
+    All authors are from the University of Virginia
+  sponsors:
+    - name: Carl Hildebrandt
+      profile: https://hildebrandt-carl.github.io
+    - name: Sebastian Elbaum
+      profile: http://www.cs.virginia.edu/~se4ja/
+    - name: Matthew B. Dwyer
+      profile: https://matthewbdwyer.github.io
+    - name: Nicola Bezzo
+      profile: https://www.bezzorobotics.com

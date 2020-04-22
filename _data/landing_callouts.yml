@@ -1,0 +1,24 @@
+style: is-light
+height: is-medium
+items:
+  - title: Tool Setup
+    subtitle: 
+    icon: fa-desktop 
+    description: >
+      How to get started with the code.
+    call_to_action_name: Setup
+    call_to_action_link: /setup/
+  - title: Final Results
+    subtitle: 
+    icon: fa-cogs
+    description: >
+      How we processed the data to get our final results.
+    call_to_action_name: Final Results
+    call_to_action_link: /kd-models/
+  - title: Raw Data
+    subtitle: 
+    icon: fa-database
+    description: >
+      Understanding how the raw data is structured.
+    call_to_action_name: Raw Data
+    call_to_action_link: /raw-data/

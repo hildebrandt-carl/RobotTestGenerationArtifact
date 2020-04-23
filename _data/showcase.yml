@@ -6,7 +6,7 @@ items:
     description: |- 
       To clone the repository which contains the raw data, data processing scripts and tool pipeline code run the following command in terminal or visit the github page for more details
       ```
-      git clone git@github.com:hildebrandt-carl/RobotTestGeneration.git
+      git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
       ```
     features_styles: is-centered is-outlined
     image: /img/blank.png

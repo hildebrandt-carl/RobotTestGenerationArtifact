@@ -10,12 +10,14 @@ show_sidebar: false
 
 We have broken the instructions into two sections. First we introduce how to get started with the test generation. Second we introduce how to get started with the test execution. To get started with execution you own tests is relatively simple, and we have provided both a docker image as well as the raw instructions to get started with it. Unfortunately getting started with the test execution is more complex and requires complex dependencies on both the graphics card as well as the computers network card and thus we have not provided a docker image for this section. We have provided all the instructions which can be used on a powerful machine to get up and running (We ran our tests on a machine with 64 gigs of ram, i9-10900X, and a Titan RTX with 24 gigs of onboard memory).
 
+**Note:** The following was tested on an Ubuntu 16.04 machine.
+
 ## Before Starting
 
 Before you get started make sure you have cloned the repository. You can do that by running:
 
 ```bash
-git clone git@github.com:hildebrandt-carl/RobotTestGeneration.git
+git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
 ```
 
 # Test Generation
@@ -32,7 +34,7 @@ To install the test generation tool pipeline on your own machine you can do the 
 
 ### Prerequisites
 
-You need to have the following installed in order to run the application:
+You need to have the following installed in order to run the test generation pipeline:
 
 ```
 $ sudo apt-get install python3-pip python3-tk -y
@@ -42,10 +44,32 @@ $ pip3 install numpy --user
 $ pip3 install matplotlib --user
 $ pip3 install scipy --user
 $ pip3 install sympy --user
-$ pip3 install sklean --user
+$ pip3 install sklearn --user
 ```
 
 ### Generating Initial Tests
+
+The next thing you need to do to generate the tests is to go into the TestGeneration folder. To do that run the following commands:
+
+```bash
+cd RobotTestGeneration/TestGeneration/
+```
+
+Once you are inside the folder you can generate the tests using:
+
+```bash
+python3 -u GenerateTests/resmonitor.py -M 8g -T 8500 python3 -u GenerateTests/main.py --drone ${drone} --searchtype ${searchtype} --score ${score} --trajectorylength ${trajectorylength} --beamwidth ${beamwidth} --nodes ${nodes} --resolution ${resolution} --seed ${seed} --totaltime ${totaltime} --simulationtime ${simulationtime} --savename ${savename} 2>&1 | tee ./Results/${savename}_searchtype_${searchtype}_scoretype_${score}_dronetype_${drone}_trajectorylength_${trajectorylength}_beamwidth_${beamwidth}_nodes_${nodes}_resolution_${resolution}_seed_${seed}_totaltime_${totaltime}_simulationtime_${simulationtime}.txt &
+    
+```
+
+
+
+
+
+
+
+
+
 
 We start by generating the tests. The point of this is to generate the initial sets of tests. This includes the tests for all the search strategies namely:
 

@@ -10,7 +10,7 @@ show_sidebar: false
 To get the data, you simply need to clone the [github repo](https://github.com/hildebrandt-carl/RobotTestGeneration). To do that run the following command in your terminal:
 
 ```bash
-git clone git@github.com:hildebrandt-carl/RobotTestGeneration.git
+git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
 ```
 
 Once you cloned the repo, you will find the data in the folder: `RobotTestGeneration/TestGeneration/FinalResults`

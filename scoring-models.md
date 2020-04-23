@@ -19,7 +19,7 @@ RobotTestGeneration/TestGeneration/FinalResults/learned_run_flown
 Using this data we provide a script which parses the data and computes the maximum deviation from the optimal trajectory. It then displays the data as a ratio of the mean maximum deviation when no scoring model was used to the current mean maximum deviation. To run that script you can run:
 
 ```
-git clone git@github.com:hildebrandt-carl/RobotTestGeneration.git
+git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
 cd RobotTestGeneration/TestGeneration/AnalyzeResults
 python3 RQ2.py
 ```

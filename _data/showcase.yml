@@ -1,13 +1,17 @@
 intro: |-
 
 items:
-  - title: World Engine
-    subtitle: An example of a corridor dynamically created in World Engine
-    description: |-
+  - title: Getting started is easy!
+    subtitle: All the code and data has been made publicly available on github
+    description: |- 
+      To clone the repository which contains the raw data, data processing scripts and tool pipeline code run the following command in terminal or visit the github page for more details
+      ```
+      git clone git@github.com:hildebrandt-carl/RobotTestGeneration.git
+      ```
     features_styles: is-centered is-outlined
-    image: /img/minimap.gif
-    image_ratio: is-4by3
+    image: /img/blank.png
+    image_ratio: is-6by1
     link: https://github.com/hildebrandt-carl/RobotTestGeneration
-    link_text: Github Repo
+    link_text: Github Repository
     tags: Test Generation, Stress Testing, Mobile Robots, Kinematic and Dy- namic Models, Trajectories
     github: hildebrandt-carl/RobotTestGeneration

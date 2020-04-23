@@ -1,13 +1,13 @@
-- name: Setup
-  link: /setup/
-- name: Final Results
-  link: /kd-models/
-  dropdown:
-    - name: KD Models
-      link: /kd-models/
-    - name: Scoring Models
-      link: /scoring-models/
-    - name: Study
-      link: /study/
 - name: Raw Data
   link: /raw-data/
+- name: Reproducing Results
+  link: /kd-models/
+  dropdown:
+    - name: (RQ1) KD Models
+      link: /kd-models/
+    - name: (RQ2) Scoring Models
+      link: /scoring-models/
+    - name: Exploratory Study
+      link: /study/
+- name: Tool Pipeline
+  link: /setup/

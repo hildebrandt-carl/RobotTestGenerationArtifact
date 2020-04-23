@@ -1,12 +1,111 @@
 ---
-title: Setup
-subtitle: How to get started
+title: Tool Pipeline
+subtitle: Getting started with our tool pipeline.
 description: How to get setup with our tool
 layout: page
 show_sidebar: false
 ---
 
+# Introduction
+
+We have broken the instructions into two sections. First we introduce how to get started with the test generation. Second we introduce how to get started with the test execution. To get started with execution you own tests is relatively simple, and we have provided both a docker image as well as the raw instructions to get started with it. Unfortunately getting started with the test execution is more complex and requires complex dependencies on both the graphics card as well as the computers network card and thus we have not provided a docker image for this section. We have provided all the instructions which can be used on a powerful machine to get up and running (We ran our tests on a machine with 64 gigs of ram, i9-10900X, and a Titan RTX with 24 gigs of onboard memory).
+
+## Before Starting
+
+Before you get started make sure you have cloned the repository. You can do that by running:
+
+```bash
+git clone git@github.com:hildebrandt-carl/RobotTestGeneration.git
+```
+
+# Test Generation
+
+The test generation generated tests which you could then execute on an autonomous system. To get started with this you can either use a docker image or install the system on your own machine. More details on each are given below:
+
+## Docker Image
+
+TODO
+
+## Installing on your Own Machine
+
+To install the test generation tool pipeline on your own machine you can do the following: 
+
+### Prerequisites
+
+You need to have the following installed in order to run the application:
+
+```
+$ sudo apt-get install python3-pip python3-tk -y
+$ pip3 install --upgrade pip --user
+$ pip3 install psutil --user
+$ pip3 install numpy --user
+$ pip3 install matplotlib --user
+$ pip3 install scipy --user
+$ pip3 install sympy --user
+$ pip3 install sklean --user
+```
+
+### Generating Initial Tests
+
+We start by generating the tests. The point of this is to generate the initial sets of tests. This includes the tests for all the search strategies namely:
+
+* Random (random)
+* Approximate Kinematic (maxvel)
+* Full Kinematic (kinematic)
+
+You can generate the tests using the available script. The script which are available alow you to generate either the full set of initial tests, or just a limited number of test sets. The full set of initial tests lets you view how the number fo valid trajectories change per the trajectory complexity. The limited number of test sets allows you to generate just  the tests required to run the entire tool chain. The scripts are named as follows:
+
+* initial_all_run.sh
+
+**NOTE:** These scripts were designed and run on a computer with a 20 core CPU. I recommend changing the number of python scripts launched to be less than or equal to the number of CPU cores you have available.
+
+To run a script you use
+```
+$ cd ~/Desktop/RobotTestGeneration/TestGeneration
+$ ./initial_all_run.sh
+```
+
+All tests will be output into `RobotTestGeneration/TestGeneration/Results` folder. We want to move them to a final folder. Once your tests are done running. You can do this by checking the list of process. Move the results into the final results folder
+```
+$ mv Results FinalResults
+$ cd FinalResults
+$ mkdir initial_run_flown
+$ mv `ls -A | grep -v initial_run_flown` ./initial_run_flown
+```
+
+Feel free to call `initial_run_flown` anything you wish. Just remember it for later as this folder name is required.
+
+
+
+
+
+
+
+
+
+# Test Execution
+
+
+
+
+
+
+
+
 # Work Flow
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Prerequisits
 

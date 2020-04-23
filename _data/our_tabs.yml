@@ -2,12 +2,12 @@ alignment: is-left
 style: is-boxed
 size: is-large
 items:
-  - name: KD Models
+  - name: (RQ1) KD Models
     link: /kd-models/
     icon: fa-angle-right
-  - name: Scoring Models
+  - name: (RQ2) Scoring Models
     link: /scoring-models/
     icon: fa-angle-right
-  - name: Study
+  - name: Exploratory Study
     link: /study/
     icon: fa-angle-right

@@ -7,14 +7,6 @@ show_sidebar: false
 callouts: landing_callouts
 ---
 
-# Overview
+# Paper Abstract
 
-Executing a standard test set for mobile robots is common to validate that the robot works correctly. However, these standard tests overlook faults that may arise when the robot is stressed. Creating stressful tests is difficult as each robot is different and has different physical capabilities. We provide a tool that using the kinematic and dynamic model of a robot as well as a parameterisable scoring model can stress robots. Using this, we can generate tests that are both feasible as well as stressful. This tool comes with code which can be used to generate these trajectories, a drone simulation called World Engine built using [Unity](https://unity.com) as well as [FlightGoggles](https://flightgoggles.mit.edu), the code used to fly the Anafi drone, as well as the code used to process the data. So, for example, in 1 we can see the drone doing a standard test of flying. In 2 we can see that the drone needs to make complex turns in order to reach a goal.
-
-<div style="text-align:center" markdown="1">
-![An image of the drone trajectory](img/StressExample.png)
-</div>
-
-# Getting Started
-
-Getting started is easy. Take a look at any of the following:
+While executing nominal tests on mobile robots is required for their validation, such tests may overlook faults that arise under trajectories that accentuate certain aspects of the robot’s behavior. Uncovering such stressful trajectories is challenging as the input space for these systems, as they move, is extremely large, and the relation between a planned trajectory and its potential to induce stress can be subtle. To address this challenge we propose a frame- work that 1) integrates kinematic and dynamic physical models of the robot into the automated trajectory generation in order to generate valid trajectories, and 2) incorporates a parameterizable scoring model to efficiently generate physically valid yet stressful trajectories for a broad range of mobile robots. We evaluate our approach on four variants of a state-of-the-art quadrotor in a rac- ing simulator. We find that, for non-trivial length trajectories, the incorporation of the kinematic and dynamic model is crucial to generate any valid trajectory, and that the approach with the best hand-crafted scoring model and with a trained scoring model can cause on average a 55.9% and 41.3% more stress than a random selection among valid trajectories. A follow-up study shows that the approach was able to induce similar stress on a deployed commercial quadrotor, with trajectories that deviated up to 6m from the intended ones.

@@ -7,13 +7,11 @@ show_sidebar: false
 
 # Getting the Data
 
-To get the data, you simply need to clone the [github repo](https://github.com/hildebrandt-carl/RobotTestGeneration). To do that run the following command in your terminal:
+To find the raw data look inside the `RawData` folder. You can find the `RawData` folder in:
 
-```bash
-git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
 ```
-
-Once you cloned the repo, you will find the data in the folder: `RobotTestGeneration/TestGeneration/FinalResults`
+cd ~/Artifact/RawData
+```
 
 # Data Structure
 
@@ -162,7 +160,7 @@ The naming scheme corresponds to the following:
 The full set of scripts used to process the data is made available in the repo and described in the data processing tab[Reproducing Results](../kd-models/) section. However, here is a basic example of using raw data to get something meaningful. Let's say we wanted to visualize the experiment run on the learned scoring model of the MIT drone using a waypoint controller. We would navigate to the following folder:
 
 ```bash
-cd RobotTestGeneration/TestGeneration/FinalResults/learned_run_flown/learned_speed-1_minsnap0_MIT_seed10_length10_nodes250_res4_beamwidth5_totaltime3600_simtime90_searchtype_kinematic_scoretype_learned/maps/map1
+cd ~/Artifact/RawData/learned_run_flown/learned_speed-1_minsnap0_MIT_seed10_length10_nodes250_res4_beamwidth5_totaltime3600_simtime90_searchtype_kinematic_scoretype_learned/maps/map1
 ```
 
 Looking at the raw data in `performance_speed-1_minsnap0.txt` we would see the following data:

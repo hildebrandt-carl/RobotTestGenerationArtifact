@@ -11,8 +11,7 @@ tabs: our_tabs
 To assess the benefits of incorporating the kinematic and dynamic model we generated tests using no kinematic model, tests that used a maximum velocity to approximate the kinematic model, and the kinematic model. The test sets used are found in the `FinalResults/initial_run_flown` folder. Using a python script we can analyze the raw data to answer RQ1. The python scripts are found in the `AnalyzeResults` section. To run the python script which analyzes the benefits of incorporating the kinematic and dynamic model run the following python commands:
 
 ```bash
-git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
-cd RobotTestGeneration/TestGeneration/AnalyzeResults
+cd ~/Artifact/ReproducingResults
 python3 RQ1_GEN.py
 ```
 
@@ -33,8 +32,7 @@ RobotTestGeneration/TestGeneration/FinalResults/initial_run_flown/initial_MIT_se
 We wrote a python script that parses this data to extract the maximum deviation, maximum acceleration as well as the total time taken when executing the tests. To run that script navigate to the `AnalyzeResults` folder:
 
 ```bash
-git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
-cd RobotTestGeneration/TestGeneration/AnalyzeResults
+cd ~/Artifact/ReproducingResults
 python3 RQ1_METRICS.py
 ```
 

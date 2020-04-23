@@ -17,8 +17,7 @@ anafi_learned_run_flown/learned_anafi_sim_ANAFI_seed10_length10_nodes250_res4_be
 The data can then be parsed using the provided script. This script parses the data and finds the test with the largest deviation. The test with the largest deviation is then displayed. The script can be run by running the following commands:
 
 ```bash
-git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
-cd RobotTestGeneration/TestGeneration/AnalyzeResults
+cd ~/Artifact/ReproducingResults
 python3 RQ3_COMPARISON.py
 ```
 
@@ -40,8 +39,7 @@ anafi_learned_run_flown/learned_anafi_sim_ANAFI_seed10_length10_nodes250_res4_be
 We can then use a script provided in the repo which parses the information and computes the ratio of the maximum deviation. To run this script you can use the following commands:
 
 ```bash
-git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
-cd RobotTestGeneration/TestGeneration/AnalyzeResults
+cd ~/Artifact/ReproducingResults
 python3 RQ3_ANAFI.py
 ```
 

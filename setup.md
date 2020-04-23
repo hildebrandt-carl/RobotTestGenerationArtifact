@@ -61,6 +61,21 @@ Once you are inside the folder you can generate the tests using:
 python3 main.py --drone mit --searchtype "random" --score "random" --trajectorylength 3 --beamwidth 5 --nodes 250 --resolution 4 --seed 10 --totaltime 60 --simulationtime 10 --savename "test"
 ```
 
+The different parameters are described below:
+
+Name    | Description
+------------ | -------------
+drone               |  The data from the *Anafi controller*
+searchtype          |  The search type used. It can be no search model (**random**), an approximate kinematic model that uses the maximum velocity (**maxvel**), or the kinematic and dynamic model (**kinematic**).
+score               |  The score model used. It can be no scoring model (**random**), one of the predefined handcrafted models (**maxvel**), or the kinematic and dynamic model (**kinematic**)
+trajectorylength    |  The data from the *minimum snap controller*
+beamwidth           |  The data from the *fixed velocity controller* attempting to maintain 2m/s
+nodes               |  The data from the *fixed velocity controller* attempting to maintain 5m/s
+resolution          |  The data from the *fixed velocity controller* attempting to maintain 10m/s
+seed                |  The data from the *fixed velocity controller* attempting to maintain 10m/s
+totaltime           |  The data from the *fixed velocity controller* attempting to maintain 10m/s
+simulationtime      |  The data from the *fixed velocity controller* attempting to maintain 10m/s
+savename            |  The data from the *fixed velocity controller* attempting to maintain 10m/s
 
 
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Feasible and Stressful Trajectory Generation for Mobile Robots
-subtitle: ISSTA 2020 - Artifact
+subtitle: Carl Hildebrandt, Sebastian Elbaum, Nicola Bezzo, Matthew B. Dwyer - ISSTA 2020 Artifact
 showcase: showcase
 show_sidebar: false 
 callouts: landing_callouts

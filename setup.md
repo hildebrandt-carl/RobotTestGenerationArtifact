@@ -52,14 +52,13 @@ $ pip3 install sklearn --user
 The next thing you need to do to generate the tests is to go into the TestGeneration folder. To do that run the following commands:
 
 ```bash
-cd RobotTestGeneration/TestGeneration/
+cd RobotTestGeneration/TestGeneration/GenerateTests
 ```
 
 Once you are inside the folder you can generate the tests using:
 
 ```bash
-python3 -u GenerateTests/resmonitor.py -M 8g -T 8500 python3 -u GenerateTests/main.py --drone ${drone} --searchtype ${searchtype} --score ${score} --trajectorylength ${trajectorylength} --beamwidth ${beamwidth} --nodes ${nodes} --resolution ${resolution} --seed ${seed} --totaltime ${totaltime} --simulationtime ${simulationtime} --savename ${savename} 2>&1 | tee ./Results/${savename}_searchtype_${searchtype}_scoretype_${score}_dronetype_${drone}_trajectorylength_${trajectorylength}_beamwidth_${beamwidth}_nodes_${nodes}_resolution_${resolution}_seed_${seed}_totaltime_${totaltime}_simulationtime_${simulationtime}.txt &
-    
+python3 main.py --drone mit --searchtype "random" --score "random" --trajectorylength 3 --beamwidth 5 --nodes 250 --resolution 4 --seed 10 --totaltime 60 --simulationtime 10 --savename "test"
 ```
 
 

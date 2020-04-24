@@ -50,7 +50,7 @@ The results from running this script can be seen in the output (Figure 9 in the 
 </div>
 
 
-## Additional Analysis
+## Additional Analysis not Included in the Paper
 
 We show that you can perform a similar study on the learned controllers from the MIT Flightgoggles drone. As this requires a different set of data from the Anafi drone, we included this as an additional script. The [raw data](../raw-data/)for this script is found in the `initial_run_flown` as well as the `learned_run_flown` folders. More specifically, they can be found in:
 

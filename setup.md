@@ -10,6 +10,12 @@ show_sidebar: false
 
 We have broken the instructions into two sections. First, we introduce how to generate your own tests using the test generation tool. Second, we present how one could go about executing the generated tests. The test generation tool does not rely on many dependencies and therefore setting it up is not too complex. However, running the simulator to executing the tests requires many dependencies, including dependencies on the graphics card, network setup, python libraries, Matlab libraries, and the Robotic Operating System libraries. Thus the test execution portion of our tool has not been included in the virtual machine. We, however, have still provided instructions on how to setup the test execution on a standalone machine. (**Note:** We ran our tests on an Ubuntu 16.04 machine with 64 gigs of ram, i9-10900X, and a Titan RTX with 24 gigs of onboard memory).
 
+Below we show what the expected results of both the test generation (left) as well as simulator (right) would look like.
+
+<div style="text-align:center" markdown="1">
+![tiny](../img/testexample_ratio.png) ![tiny](../img/minimap.gif)
+</div>
+
 # Test Generation
 
 This section describes the test generating process used in our study. In our study, we set the total time of test generation to 2 hours. Due to the time constraints for evaluating the tool, we have instead used a total time of 1 minute. We will start by describing how to generate a test suite, followed by how to view the generated test suite. To get started with the generation, go into the `~Artifact\TestGeneration\GenerateTests` folder. To do that, you can run the following command in the terminal.

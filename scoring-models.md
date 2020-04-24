@@ -29,7 +29,7 @@ Using this, we can see the following output (Figure 7 in the [paper](../paper/))
 ![image](../img/maxdev_ratio.png)
 </div>
 
-## Additional Analysis
+## Additional Analysis not Included in the Paper
 
 We show that there are additional ways to present and analyze the data presented for RQ2. For instance, inside the `RQ2.py` script, we include a way to include the visualization of the initial test set. When running the `RQ2.py` script, you will also be presented with the following figure, which shows the initial test set marked using a 1:
 

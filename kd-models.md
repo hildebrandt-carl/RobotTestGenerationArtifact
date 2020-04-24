@@ -48,7 +48,7 @@ These commands will generate a figure that shows the distribution of the maximum
 </div>
 
 
-## Additional Analysis
+## Additional Analysis not Included in the Paper
 
 We show that there are additional ways to analyze the [raw data](../raw-data/) from RQ1. Inside the `RQ1_GEN.py` python script we include a way to analyze the total number of process trajectories, complete trajectories as well as valid trajectories which is then plotted as a bar graph shown below:
 

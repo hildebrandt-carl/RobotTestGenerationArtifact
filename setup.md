@@ -118,7 +118,7 @@ DATA: Total valid trajectories: 0
 
 We notice that due to lack of a kinematic and dynamic model, we process many more explored trajectories, however, we find no valid trajectories. We would need to run the experiment much longer before a valid trajectory was found.  Now that you are able to generate tests, the next step is installing the simulator.
 
-# Installing the simulator
+# Installing the Simulator
 
 After installing the simulator you will expereince a simulator similar to the one below. (**Note:** In this example we were flying using the environment settings which can be manually configured.)
 

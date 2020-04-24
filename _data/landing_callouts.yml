@@ -1,13 +1,6 @@
 style: is-light
 height: is-medium
 items:
-  - title: Raw Data
-    subtitle: 
-    icon: fa-database
-    description: >
-      Understanding how the raw data is named, structured, and saved.
-    call_to_action_name: Raw Data
-    call_to_action_link: /raw-data/
   - title: Reproducing Results
     subtitle: 
     icon: fa-desktop
@@ -15,6 +8,13 @@ items:
       We provide scripts that process the raw data so you can reproduce the our results.
     call_to_action_name: Reproducing Results
     call_to_action_link: /kd-models/
+  - title: Raw Data
+    subtitle: 
+    icon: fa-database
+    description: >
+      Understanding how the raw data is named, structured, and saved.
+    call_to_action_name: Raw Data
+    call_to_action_link: /raw-data/
   - title: Tool Pipeline
     subtitle: 
     icon: fa-cogs

@@ -1,5 +1,3 @@
-- name: Raw Data
-  link: /raw-data/
 - name: Reproducing Results
   link: /kd-models/
   dropdown:
@@ -9,5 +7,7 @@
       link: /scoring-models/
     - name: Exploratory Study
       link: /study/
+- name: Raw Data
+  link: /raw-data/
 - name: Tool Pipeline
   link: /setup/

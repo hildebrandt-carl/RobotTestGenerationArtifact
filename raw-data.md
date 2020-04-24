@@ -7,40 +7,38 @@ show_sidebar: false
 
 # Getting the Data
 
-To find the raw data look inside the `RawData` folder. You can find the `RawData` folder in:
+All the raw data used in our approach is inside the folder `RawData` folder. To access that folder you can run the following command in the terminal:
 
-```
+```bash
 cd ~/Artifact/RawData
 ```
 
-# Data Structure
+# Directory Structure
 
-This section will describe how the data is structured, formatted and saved. The data is structured as shown below (Note the output of the command `tree -d -L 4 --filelimit=10` has been edited slightly to show more details of the structure). The data is separated into **4 main folders** that represent the **main experiments** run. Each of these main folders have **subfolders** that represent the different **test sets** generated for each of the experiments. Inside each of these sub-folders is a maps folder which contains a set of maps. Each map represents a different test that was generated.
+This section will describe how the `RawData` directory is structured, formatted, and named. The directory is structured and shown in the image below (Note: the output of `tree -d -L 4 --filelimit=10` has been edited somewhat for easier viewing on a website). The directory is separated into 5 folders. One folder `FinalScoringModels` contains the scoring model described later on this page. The other **4  folders** that represent the **main experiments** that were run. The experiment folders have **subfolders** that represent the different **test suites** generated for each experiment. Inside each of these subfolders is a folder that contains each of the **test cases**, named maps.
 
 ![The ls command output](../img/tree.png)
 
-In the sections below we give more details on the naming schemes, structure, and data contained inside each of the folders.
+The 4 main experiments represent each of the different experiments that were run for our study. The experiments are named as follows
 
-## Main Experiments
-
-The data is separated into four different folders. Each folder represents a different experiment that was run. The folders are separated as follows:
-
-* **initial_run_flown**: This folder contains the initial tests run for both the Anafi drone and the MIT Flightgoggles drone. It contains the tests generated using random selection, maximum velocity selection as well as kinematic and dynamic selection. No scoring functions are used in any of these test sets.
-* **handcrafted_run_flown**: This folder contains the test sets created using the handcrafted scoring models. These tests were only run on the MIT Flightgoggles drone.
-* **learned_run_flown**: This folder contains the test sets generated for learned scoring models. There is a different scoring model for each of the MIT Flightgoggles drone controllers.
+* **initial_run_flown**: This folder contains the initial tests suite that was generated for both the Anafi drone and the MIT Flightgoggles drone. It contains the tests generated using random selection, maximum velocity selection, as well as kinematic and dynamic selection. No scoring functions are used in any of these test suites.
+* **handcrafted_run_flown**: This folder contains the test suite created using the handcrafted scoring models. These tests were only run on the MIT Flightgoggles drone.
+* **learned_run_flown**: This folder contains the test suite generated for learned scoring models. There is a different scoring model for each of the MIT Flightgoggles drone controllers.
 * **anafi_learned_run_flown**: This folder contains the test data for the learned scoring model of the Anafi drone.
 
-We can view these folders by simply running an `ls` command in the `FinalResults` directory:
+We can view these folders by running an `ls` command in the `RawData` directory in our terminal, as shown below:
 
 ![The ls command output](../img/first.png)
 
-## Test Sets
+In the subsequent sections below, we give more details on the naming schemes, structure, and data contained inside each of the folders.
 
-Each of the experiment folders contains the test sets generated for that specific experiment. Below is a description of the test set naming convention used. Each experiments folder contains a list of text files and folders pairs. The text files contain the terminal output from running the test generation tool. The folders contain the tests generated for each run. Thus by counting the folders, we can see that there are a total of 43 test sets in the initial run folder. The folders and text file pairs were named using the test generation parameter information as part of the name.
+# Test Suites
 
-So, for instance, using the text file below:
+Each of the folders contains the test suites generated for that specific experiment. Below is a description of the test suite naming convention that was used. Each experiment folder contains a list of text file and folder pairs. The text files contain the terminal output created when running the test generation tool. The folders contain the actual test cases for each test suites. The folders and text file pairs were named using the test generation parameters.
+
+So, for instance, considering the text file below:
 ```bash
-initial_searchtype_kinematic_scoretype_random_dronetype_anafi_trajectorylength_3_beamwidth_5_nodes_250_resolution_4_seed_10_totaltime_7200_simulationtime_27
+initial_searchtype_kinematic_scoretype_random_dronetype_anafi_trajectorylength_3_beamwidth_5_nodes_250_resolution_4_seed_10_totaltime_7200_simulationtime_27.txt
 ```
 We can infer it was generated using the following parameters:
 * Prefix (*initial*): A developer given prefix for the file name giving as a parameter to the test generation technique
@@ -55,27 +53,26 @@ We can infer it was generated using the following parameters:
 * Total time (*7200*): The total time in seconds for test generation and testing the drone.
 * Simulation time (*27*): The total time in seconds given to the simulator or outdoor test runs. This time is used by the test generation technique to take into account how much time is required to execute an identified test.
 
-A very similar naming technique is used for the associated folder that contains the generated tests. For example, the above output file saved all the tests in the folder:
+A very similar naming technique is used for the associated folder that contains the generated tests. For example, the above output file saved all the test cases inside the folder:
 ```bash
 initial_ANAFI_seed10_length3_nodes250_res4_beamwidth5_totaltime7200_simtime27_searchtype_kinematic_scoretype_random
 ```
 
-Using the naming convention we can find specific test sets. Say for instance you want all test sets of length 3. We can find these test sets using the `ls` command and grep for any files or folders with length 3 in the `FinalResults/initial_run_flown` directory:
+Using the naming convention, we can identify specific test suites we are interested in. Say, for instance, you want all test sets of length 3. We can find these test sets using the `ls` command and grep for any files or folders with length 3 in the `~RawData/initial_run_flown/` directory:
 
 ![The ls command output](../img/second.png)
 
-## Individual Tests
+# Individual Test Cases
 
-Inside each of the sub folders that contains the test set, you will find a 'maps' folder. The maps folder contains all the tests for each of the test sets. Each map is a new test which the robot should execute. If we were to run the `ls` command inside the map folder we would have the following output:
+Inside each of the test suites folders, you will find a set of individual test cases. The test cases are saved inside the `maps` folder. The `maps` folder contains all the test cases for that specific test suite. Each map is a unique test case which the robot could execute. If we were to run the `ls` command inside the `maps` folder, we would see the individual test cases. Selecting the first test case `maps1` we can again use the `ls` command to see what each test contains:
 
 ![The ls command output](../img/third.png)
 
-Each of the files are now described in more detail below:
+Each of the test cases contains a variety of data. We will now explain the data found inside each test case.
 
-### Generated Test
+## Generated Test
 
-
-The files related to test generation are inside the maps folder and described below:
+The files related to test generation are inside are described below:
 
 Name    | Description
 ------------ | -------------
@@ -86,11 +83,9 @@ trajectory_xz#.txt  | An image showing the trajectory from a side view along the
 trajectory_yz#.txt  | An image showing the trajectory from a side view along the y-axis. # represents the test number.
 trajectory#.txt     | An image showing the 3D representation of the trajectory.
 
+## Test Execution Data 
 
-
-### Test Execution Data 
-
-If a test is executed, the resulting files are saved in the map folder. Each of the resulting files is described below. The tests could be executed by the Anafi drone or the Flightgoggles MIT drone. Each of the controller naming schemes are described below.
+If a test is executed, the resulting files are saved in the test case folder. Each of the resulting files is described below. The tests could be executed by the Anafi drone or the Flightgoggles MIT drone, which have different controllers. To easily identify the controller used, the following naming conventions were used:
 
 Name    | Description
 ------------ | -------------
@@ -102,7 +97,7 @@ speed2_minsnap0     |  The data from the *fixed velocity controller* attempting 
 speed5_minsnap0     |  The data from the *fixed velocity controller* attempting to maintain 5m/s
 speed10_minsnap0    |  The data from the *fixed velocity controller* attempting to maintain 10m/s
 
-When the test was run, they produced the following output which is also saved inside the individual map folder (*Note: {controller} can be replaced with any of the above listed controllers*).
+When the test was run, they produced the following output that is also saved inside the test case folder (*Note: {controller} can be replaced with any of the above-listed controllers*).
 
 Name    | Description
 ------------ | -------------
@@ -111,7 +106,7 @@ angular_rate_log_{controller}.txt        | A data file that contains the output 
 attitude_thrust_log_{controller}.txt     | A data file that contains the output of the attitude and thrust controller. This includes the message publishing time, the requested attitude in the X, Y, and Z orientation as well as the thrust.
 velocity_log_{controller}.txt            | A data file that contains the output of the velocity controller. This includes the message publishing time, the requested velocity in the X, Y, and Z direction.
 
-There was one exception to this, namely the minimum snap controller. Due to the minimum snap controller computing its own curved trajectory through the waypoints when the minimum snap controller was executed, a few additional output files were generated. These files contained descriptions of the expected trajectory and are listed below:
+There was one exception to this, namely the minimum snap controller. Due to the minimum snap controller computing its own curved trajectory through the waypoints when the minimum snap controller was executed, a few additional output files were generated for this controller. These files contained descriptions of the expected trajectory and are listed below:
 
 Name    | Description
 ------------ | -------------
@@ -120,9 +115,9 @@ top_minsnap1_speed-1          | An image showing a top view of the original traj
 sidexz_minsnap1_speed-1       | An image showing the side view along the x-axis of the original trajectory and the computed minimum snap trajectory.
 sideyz_minsnap1_speed-1       | An image showing the side view along the y-axis of the original trajectory and the computed minimum snap trajectory.
 
-### Analysis Data
+## Analysis Data
 
-There are a few files in here which are then computed after processing the data. Scripts used for processing the data can be found in the [Tool Pipeline](../setup/) section. However, for completion, a brief description of of the output files generated from processing is is given below:
+After executing a test case, the performance was analyzed and output saved inside the test case folder. More details on the processing of the data can be found inside the [Tool Pipeline](../setup/) section. However, for completion, a brief description of of the output files generated from processing is given below:
 
 Name    | Description
 ------------ | -------------
@@ -136,11 +131,11 @@ flight_comparison_sideyz_{controller}.txt  | An image showing a side view along 
 
 # Scoring Models
 
-The scoring models are saved in the folder  `RobotTestGeneration/TestGeneration/FinalModels`. The final models are the scoring models which were learned using the [scikit-learn](https://scikit-learn.org/stable/index.html). For example to list all the models we can run the `ls` command to get the following output:
+The scoring models used in our study can be found in the `~Artifact/RawData/FinalScoringModels` folder. The final models are the scoring models that were learned using the [scikit-learn](https://scikit-learn.org/stable/index.html). For example, to list all the models, we can run the `ls` command to get the following output:
 
 ![The ls command output](../img/fourth.png)
 
-Looking at two of the models we see they are named as follows. 
+Looking at two of the models we see, they are named as follows. 
 
 ```bash
 len10_speed2_minsnap0_poly_features.npy
@@ -157,7 +152,7 @@ The naming scheme corresponds to the following:
 
 # Example: Using the Data
 
-The full set of scripts used to process the data is made available in the repo and described in the data processing tab[Reproducing Results](../kd-models/) section. However, here is a basic example of using raw data to get something meaningful. Let's say we wanted to visualize the experiment run on the learned scoring model of the MIT drone using a waypoint controller. We would navigate to the following folder:
+The full set of scripts used to process the data is made available in the [Reproducing Results](../kd-models/) section. However, here is a basic example of how to use raw data to get something meaningful. Let's say we wanted to visualize the experiment run on the learned scoring model of the MIT drone using a waypoint controller. We would navigate to the following folder:
 
 ```bash
 cd ~/Artifact/RawData/learned_run_flown/learned_speed-1_minsnap0_MIT_seed10_length10_nodes250_res4_beamwidth5_totaltime3600_simtime90_searchtype_kinematic_scoretype_learned/maps/map1

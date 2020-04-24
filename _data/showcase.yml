@@ -1,10 +1,20 @@
 intro: |-
 
 items:
-  - title: Getting started is easy!
-    subtitle: All the code and data has been made publicly available on github
+  - title: Quick Start
+    subtitle: An easy way to evaluate the tool without any setup required
     description: |- 
-      To clone the repository which contains the raw data, data processing scripts and tool pipeline code run the following command in terminal or visit the github page for more details
+      We recommend starting using this method. Start by downloading the provided virtual machine. You shouldn't need it but just incase the virtual machines password is **'artifact'**. The virtual machine will allow you to view the raw data, reproduce our results from our raw data and generate your own tests. We recommend importing the virtual machine into [VirtualBox](https://www.virtualbox.org). Once you have downloaded and setup the virtual machine, go to the  [Raw Data](./raw-data/) tab.
+    features_styles: is-centered is-outlined
+    image: /img/blank.png
+    image_ratio: is-6by1
+    link_text: Virtual Machine Download
+    link: https://www.dropbox.com/s/za7x3c3z132smc7/ISSTA_2020_Artifact.ova?dl=1
+    tags: Test Generation, Stress Testing, Mobile Robots, Kinematic and Dynamic Models, Trajectories
+  - title: Entire Tool
+    subtitle: To get the entire tool requires powerful machine and setting up many complex dependencies
+    description: |- 
+      If you want to simulate the drones flying the tests, you will need to install complex dependencies described in the [Tool Pipeline](./setup/) section. For the second case we recommend cloning the repository which contains the raw data, data processing scripts and entire tool pipeline. To clone the repository you can run:
       ```
       git clone https://github.com/hildebrandt-carl/RobotTestGeneration.git
       ```
